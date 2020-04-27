@@ -35,39 +35,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-<%-- 	<table id="main-container">
-		<%@ include file="/WEB-INF/jspf/header.jspf"%>
-		<tr>
-			<td class="content center">
-				<form id="login_form" action="controller" method="post">
-					<input type="hidden" name="command" value="register" />
-					<legend>First_Name</legend>
-					<input name="f_name" placeholder="F-Name" />
-					<br />
-					<br />
-					<legend>Second_Name</legend>
-					<input name="s_name" placeholder="S-Name" />
-					<br />
-					<br />
-					<legend>Create Login</legend>
-					<input name="login" placeholder="Login" />
-					<br /> <br />
-					<legend>Create Password</legend>
-					<input type="password" name="password" placeholder="Password" />
-					 <br />
-					<input type="submit" value="Register">
-				</form>
-
-				<p class="message">You are registered? <a href="login.jsp">Sign_UP</a></p>
-			</td>
-
-		</tr>
-		<%@ include file="/WEB-INF/jspf/footer.jspf"%>
-	</table> --%>
