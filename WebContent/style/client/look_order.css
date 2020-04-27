@@ -121,17 +121,17 @@ body {
 	background-size: cover;
 	font-family: "Roboto", sans-serif;
 }
-        .text-no{
-            position:relative;
-            top: 130;
-            left:150;
-            font-size: 25pt;
-            color:#ff0000 ;
-        }
+.text-no{
+        position:relative;
+	top: 130;
+        left:150;
+        font-size: 25pt;
+        color:#ff0000 ;
+}
         
-        .center-room{
-            position:relative;
-            left:150;
-            font-size: 25pt;
+.center-room{
+        position:relative;
+        left:150;
+        font-size: 25pt;
             
-        }
+ }
