@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.block {
+	padding: 5px;
+	text-align: left;
+	float: left;
+}
+
+.sort {
+	background: #FFFFFF;
+	padding: 10px;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0
+		rgba(0, 0, 0, 0.24);
+}
+
+.table-room {
+	background: #FFFFFF;
+	padding: 35px;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0
+		rgba(0, 0, 0, 0.24);
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	border: 1px solid black;
+	padding: 6px;
+}
+
+.general {
+	padding: 10% 20% 0;
+}
+
+button {
+	background: #aaaa;
+	position: relative;
+	border: 1px solid white;
+	font-family: "Roboto", sans-serif;
+	background: #0080ff;
+	padding: 4px;
+	color: #ffffff;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+body {
+	background: url('img/change_status.jpeg') fixed;
+	background-size: cover;
+	font-family: "Roboto", sans-serif;
+}
+
+.CheckTime {
+	position: absolute;
+	top: 26%;
+	right: 25%
+}
+
+.CheckTime button {
+	background: #ff0000;
+	padding: 6px;
+	font-size: 16;
+}

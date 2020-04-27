@@ -1,0 +1,70 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+@import
+	url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+
+.page {
+	display: inline-block;
+	padding: 10% 20% 0;
+}
+
+.back-one {
+	border-collapse: collapse;
+	background: #FFFFFF;
+	max-width: 800px;
+	padding: 40px;
+	text-align: center;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0
+		rgba(0, 0, 0, 0.24);
+}
+
+.back-two {
+	border-collapse: collapse;
+	position: relative;
+	top: 50px;
+	background: #FFFFFF;
+	max-width: 800px;
+	padding: 40px;
+	text-align: center;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0
+		rgba(0, 0, 0, 0.24);
+}
+
+body {
+	background: url('img/personal_office.jpeg') fixed;
+	background-size: cover;
+	font-family: "Roboto", sans-serif;
+}
+
+td {
+	border: 1px solid black;
+	padding: 6px;
+}
+
+table {
+	border-collapse: collapse;
+	text-align: center;
+}
+
+button {
+	background: #aaaa;
+	position: relative;
+	border: 1px solid white;
+	font-family: "Roboto", sans-serif;
+	text-transform: uppercase;
+	background: #0080ff;
+	padding: 10px;
+	color: #ffffff;
+	font-size: 16px;
+	-webkit-transition: all 0.3 ease;
+	transition: all 0.3 ease;
+	cursor: pointer;
+}
+
+.text-one, .text-two {
+	position: relative;
+	top: -10px;
+	font-size: 20;
+	color: #0080ff;
+	font-family: 'Signika', sans-serif;
+}

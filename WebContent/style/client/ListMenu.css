@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.back {
+	position: relative;
+	z-index: 1;
+	background: #F5FFFA;
+	padding: 40px;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	text-align: center;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0
+		rgba(0, 0, 0, 0.01);
+}
+
+
+.block-time {
+	padding: 5px;
+	text-align: left;
+	float: right;
+}
+
+.choose {
+	background: #FFFFFF;
+	padding: 15px;
+	text-align: center;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0
+		rgba(0, 0, 0, 0.24);
+}
+
+.block {
+	padding: 5px;
+	text-align: left;
+	float: left;
+}
+
+
+.sort {
+	background: #FFFFFF;
+	padding: 15px;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0
+		rgba(0, 0, 0, 0.24);
+}
+
+.table-room {
+	background: #FFFFFF;
+	padding: 40px;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0
+		rgba(0, 0, 0, 0.24);
+}
+
+table {
+	border-collapse: collapse;
+}
+
+td {
+	border: 1px solid black;
+	padding: 6px;
+}
+
+.general {
+	padding: 7% 25% 0;
+}
+
+button {
+	background: #aaaa;
+	position: relative;
+	border: 1px solid white;
+	font-family: "Roboto", sans-serif;
+	background: #0080ff;
+	padding: 4px;
+	color: #ffffff;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+body {
+	background: url('img/new_back.jpeg') fixed;
+	background-size: cover;
+	font-family: "Roboto", sans-serif;
+}

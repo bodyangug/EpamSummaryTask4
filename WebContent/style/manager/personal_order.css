@@ -1,0 +1,58 @@
+@import
+	url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+
+.order-page {
+	padding: 8% 0 0;
+	margin: auto;
+}
+
+.form {
+	background: #FFFFFF;
+	text-align: center;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0
+		rgba(0, 0, 0, 0.24);
+}
+
+body {
+	background: url('img/back1.jpg') fixed;
+	background-size: cover;
+	font-family: "Roboto", sans-serif;
+}
+
+td {
+	border: 1px solid black;
+	padding: 6px;
+}
+
+#list_own_order_table {
+	width: 20%;
+	margin: auto;
+	padding: 15px;
+	background-color: #FFFFFF;
+	text-align: center;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0
+		rgba(0, 0, 0, 0.24);
+	-webkit-transition: all 0.3 ease;
+	transition: all 0.3 ease;
+}
+
+#a1 {
+	position: absolute;
+	top: 12%;
+	left: 39%;
+	color: #0080ff;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0
+		rgba(0, 0, 0, 0.5);
+	padding: 4px;
+}
+
+.no-order {
+	position: absolute;
+	width: 108;
+	left: 50%;
+	margin: auto;
+	padding: 10px;
+	color: #ff0000;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0
+		rgba(0, 0, 0, 0.5);
+}

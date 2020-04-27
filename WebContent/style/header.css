@@ -1,0 +1,37 @@
+#leftHeader {
+	float: left;
+	margin-left: 15px;
+	padding: 3px;
+	font-size: 13pt;
+	color: #FFFFFF;
+}
+
+#rightHeader {
+	float: right;
+	text-align: right;
+	margin-right: 10px;
+	font-size: 13pt;
+	padding: 2px;
+}
+
+.back-head {
+	z-index: 1;
+	border-radius: 0px 0px 10px 10px;
+	width: 95%;
+	height: 29px;
+	padding: 10px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0
+		rgba(0, 0, 0, 0.24);
+	background: #FFFFFF;
+}
+
+/* .locale {
+ position:absolute;
+ right:5%;
+ top: 6%;
+} */

@@ -1,0 +1,70 @@
+@import
+	url('https://fonts.googleapis.com/css2?family=Signika&display=swap');
+
+.ownOrder {
+	align-items: center;
+}
+
+.form-out {
+	position: absolute;
+	top: 30%;
+	right: 40%;
+}
+
+label {
+	display: inline-block;
+}
+
+body {
+	background: url('img/request.jpeg') no-repeat;
+	-moz-background-size: 100%;
+	/* Firefox 3.6+ */
+	-webkit-background-size: 100%;
+	/* Safari 3.1+ и Chrome 4.0+ */
+	-o-background-size: 100%;
+	/* Opera 9.6+ */
+	background-size: 100%;
+	/* Современные браузеры */
+	font-family: "Roboto", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+button{
+	width:80;
+	height:50;
+	background: #0080ff;
+	position: relative;
+	border: 1px solid white;
+	font-family: "Roboto", sans-serif;
+	background: #0080ff;
+	padding: 4px;
+	color: #ffffff;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.order {
+	background: #FFFFFF;
+	max-width: 550px;
+	padding: 30px;
+	text-align: center;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0
+		rgba(0, 0, 0, 0.24);
+}
+
+.fill-back {
+	position: relative;
+	height: 40px;
+	width: 230px;
+	background: #FFFFFF;
+	font-family: 'Signika', sans-serif;
+	box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.3), 0 5px 5px 0
+		rgba(0, 0, 0, 0.24);
+}
+
+#fill {
+	color: #4169E1;
+	font-weight: bold;
+	font-size: 18pt;
+}

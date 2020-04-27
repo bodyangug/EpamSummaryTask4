@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+.block-2 {
+    
+	display: inline;
+	position: relative;
+	top: 400px;
+	left: 800px;
+	overflow: auto;
+}
+
+.block-1 {
+	display: inline;
+	position: relative;
+	top: 400px;
+	left: 300px;
+	overflow: auto;
+}
+
+.manager {
+	width: 450px;
+	height: 450px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 30%;
+	margin: auto;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0
+		rgba(0, 0, 0, 0.24);
+	background: #FFFFFF;
+}
+
+.order {
+	width: 450px;
+	height: 450px;
+	position: absolute;
+	top: 0;
+	right: 30%;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0
+		rgba(0, 0, 0, 0.24);
+	background: #FFFFFF;
+}
+
+.text-center {
+	text-align: center;
+	text-decoration: underline;
+}
+
+.button-yes {
+	width: 80px;
+	height: 50px;
+	position: absolute;
+	top: 40%;
+	right: 30%;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	border: 1px solid white;
+	font-family: "Roboto", sans-serif;
+	text-transform: uppercase;
+	background: #0080ff;
+	padding: 10px;
+	color: #ffffff;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.button-no {
+	width: 80px;
+	height: 50px;
+	position: absolute;
+	top: 40%;
+	right: -30%;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	border: 1px solid white;
+	font-family: "Roboto", sans-serif;
+	text-transform: uppercase;
+	background: #0080ff;
+	padding: 10px;
+	color: #ffffff;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+.button-pay {
+	width: 80px;
+	height: 50px;
+	position: absolute;
+	top: 40%;
+	right: 0%;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	background: #aaaa;
+	border: 1px solid white;
+	font-family: "Roboto", sans-serif;
+	text-transform: uppercase;
+	background: #0080ff;
+	padding: 10px;
+	color: #ffffff;
+	font-size: 16px;
+	cursor: pointer;
+}
+
+p {
+	display: block;
+	margin-top: 5%;
+	margin-bottom: 2%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+body {
+	background: url('img/personal_office.jpeg') fixed;
+	background-size: cover;
+	font-family: "Roboto", sans-serif;
+}
+        .text-no{
+            position:relative;
+            top: 130;
+            left:150;
+            font-size: 25pt;
+            color:#ff0000 ;
+        }
+        
+        .center-room{
+            position:relative;
+            left:150;
+            font-size: 25pt;
+            
+        }

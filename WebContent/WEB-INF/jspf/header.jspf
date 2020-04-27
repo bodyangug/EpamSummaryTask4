@@ -1,0 +1,58 @@
+<%@ page import="ua.nure.aseev.SummaryTask4.db.Role"%>
+<%@ include file="/WEB-INF/jspf/directive/page.jspf"%>
+<%@ include file="/WEB-INF/jspf/directive/taglib.jspf"%>
+
+<div class="back-head">
+	<tr>
+		<td id="header"><c:if test="${not empty user}">
+
+				<div id="leftHeader">
+					<c:choose>
+						<c:when test="${userRole.name == 'manager' }">
+							<a href="controller?command=changeStatusRoom"> <fmt:message
+									key="header_jspf.manager.chooseRoomStatus" />
+							</a> &nbsp;
+				<a href="controller?command=quickOrders"> <fmt:message
+									key="header_jspf.manager.QuicOrder" />
+							</a> &nbsp;
+				<a href="controller?command=personalOrders"> <fmt:message
+									key="header_jspf.manager.personalOrder" /></a> &nbsp;
+			 </c:when>
+
+						<c:when test="${userRole.name == 'client'}">
+							<a href="controller?command=personalOffice"><fmt:message
+									key="header_jspf.client.personalOffice" /></a> &nbsp;
+      			<a href="controller?command=listMenu"><fmt:message
+									key="header_jspf.client.RoomList" /></a> &nbsp;
+      			<a href="controller?command=makeOwnOrder"><fmt:message
+									key="header_jspf.client.MakeOwnOrder" /></a> &nbsp; 
+    		</c:when>
+					</c:choose>
+				</div>
+
+				<div id="rightHeader">
+					<c:out value="${user.firstName} ${user.secondName}" />
+					<c:if test="${not empty userRole}">
+						<c:out value="(${userRole.name})" />
+					</c:if>
+					<a href="controller?command=logout"> Logout </a>
+				</div>
+
+			</c:if> <c:if test="${empty user}">
+				<div id="rightHeader">
+					<a href="login.jsp">Login</a>
+				</div>
+			</c:if>
+			<div class="locale">
+				<form action="controller" method="post">
+					<input type="hidden" name="command" value="updateLocale"> <select
+						name="locale">
+						<option value="en"><fmt:message
+								key="header_jspf.en" /></option>
+						<option value="ru"><fmt:message key="header_jspf.ru" /></option>
+					</select> <input type="submit">
+				</form>
+			</div></td>
+
+	</tr>
+</div>
