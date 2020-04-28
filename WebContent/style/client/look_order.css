@@ -117,7 +117,7 @@ p {
 }
 
 body {
-	background: url('img/personal_office.jpeg') fixed;
+	background: url('../img/personal_office.jpeg') fixed;
 	background-size: cover;
 	font-family: "Roboto", sans-serif;
 }

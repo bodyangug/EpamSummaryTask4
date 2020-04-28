@@ -23,8 +23,8 @@ import org.apache.log4j.Logger;
 public class MailNotification {
 	private static final Logger LOG = Logger.getLogger(MailNotification.class);
 
-	private String username = "forwork869@gmail.com";
-	private String password = "epamqwerty";
+	private String username="forwork869@gmail.com";
+	private String password="epamqwerty";
 	private Properties props;
 
 	public MailNotification() {
@@ -36,25 +36,9 @@ public class MailNotification {
 		props.put("mail.smtp.port", "465");
 	}
 
-	private void getPasswordAndMail() {
-		FileInputStream fis;
-		Properties property = new Properties();
-
-		try {
-			fis = new FileInputStream("src/resources.properties");
-			property.load(fis);
-
-			password = property.getProperty("mail.pass");
-			username = property.getProperty("mail.name");
-
-		} catch (IOException e) {
-			LOG.error(e);
-		}
-	}
 
 	public boolean send(String subject, String text, String toEmail) {
 		boolean result = false;
-		getPasswordAndMail();
 		Session session = Session.getDefaultInstance(props, new Authenticator() {
 			protected PasswordAuthentication getPasswordAuthentication() {
 				return new PasswordAuthentication(username, password);

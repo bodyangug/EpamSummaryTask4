@@ -33,7 +33,7 @@ public class UpdateLocalCommandTest extends Mockito {
 		user.setRole(0);
 
 		List<Room> list = new ArrayList<>();
-		Room room = new Room();
+		Room room = mock(Room.class);
 		room.setNumber(1);
 		list.add(room);
 

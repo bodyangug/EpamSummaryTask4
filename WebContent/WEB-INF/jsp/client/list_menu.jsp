@@ -7,7 +7,7 @@
 <head>
 <title>List Order</title>
 <link rel="stylesheet" type="text/css" media="screen"
-	href="style/client/ListMenu.css" />
+	href="style/client/listmenu.css" />
 <link rel="stylesheet" type="text/css" media="screen"
 	href="style/header.css" />
 <link rel="stylesheet" type="text/css" media="screen"
@@ -37,8 +37,8 @@
 						<option value="max-low-price"><fmt:message key="list_menu_jsp.sort.price.minMax"/></option>
 						<optgroup label="Count"><fmt:message key="list_menu_jsp.sort.сont"/>
 						</optgroup>
-						<option value="low-max-count"><fmt:message key="list_menu_jsp.sort.сont.minMax"/></option>
-						<option value="max-low-count"><fmt:message key="list_menu_jsp.sort.сont.maxMin"/></option>
+						<option value="low-max-count">1->4</option>
+						<option value="max-low-count">4->1</option>
 						<optgroup label="Class"><fmt:message key="list_menu_jsp.sort.class"/>
 						</optgroup>
 						<option value="luxure"><fmt:message key="list_menu_jsp.sort.class.luxure"/></option>

@@ -14,7 +14,7 @@
 }
 
 body {
-	background: url('img/back1.jpg') fixed;
+	background: url('../img/back1.jpg') fixed;
 	background-size: cover;
 	font-family: "Roboto", sans-serif;
 }

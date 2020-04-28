@@ -59,7 +59,7 @@ public class OrderDAO {
 			+ " number_of_places , class_apartment , time_start ,sucsess , time_end , price , payed_status ,operation "
 			+ "FROM request r JOIN users u ON r.id_user = u.id  JOIN rooms ON r.room_number = rooms.number  ;";
 
-	private static final String SQL_FIND_ALL_USER_OWN_ORDERS = "SELECT * FROM own_request;";
+	private static final String SQL_FIND_ALL_USER_OWN_ORDERS = "SELECT * FROM own_request ; ";
 
 	private static final String SQL_INSERT_TO_MANAGER_TABLE = "INSERT INTO request_from_manager (id_user , room_number, "
 			+ " time_start , time_end,agree,wait) VALUES (?,?,?,?,?,?) ; ";
@@ -70,7 +70,7 @@ public class OrderDAO {
 
 	public static final String SQL_DELETE_QUICK_REQUEST = "DELETE FROM request WHERE id = ? ;";
 
-	public static final String SQL_DELETE_ORDER_TIME_END = "DELETE FROM request WHERE id = ?  ; ";
+	public static final String SQL_DELETE_ORDER_TIME_END = "DELETE FROM request WHERE id_user = ?  ; ";
 
 	public static final String SQL_DELETE_REQUEST_FROM_MANAGER = "DELETE FROM request_from_manager WHERE id = ?";
 
@@ -91,6 +91,10 @@ public class OrderDAO {
 	private static final String SQL_UPDATE_ORDER_PAYED_STATUS = "UPDATE request SET payed_status = True WHERE id = ?";
 
 	public static final String SQL_DELETE_OWN_ORDER_BY_ID = "DELETE FROM own_request WHERE id = ? ;";
+
+	public static final String SQL_DELETE_OWN_ORDER_TIME_END = "DELETE FROM own_request WHERE id_user = ?  ; ";
+
+	public static final String SQL_DELET_MANAGER_ORDER = "DELETE FROM request_from_manager WHERE id_user = ? ;";
 
 	// //////////////////////////////////////////////////////////s
 	// Methods
@@ -300,7 +304,7 @@ public class OrderDAO {
 	}
 
 	/**
-	 * Find all User Orders
+	 * Find all Usr Orders
 	 * 
 	 * @return List of Request
 	 * @throws DBException
@@ -315,7 +319,7 @@ public class OrderDAO {
 			stmt = con.createStatement();
 			rs = stmt.executeQuery(SQL_FIND_ALL_USER_ORDERS);
 			while (rs.next()) {
-				list.add(extractRequest(rs));
+				list.add(extractRequestFromManager(rs));
 			}
 			con.commit();
 		} catch (SQLException ex) {
@@ -760,6 +764,36 @@ public class OrderDAO {
 	}
 
 	/**
+	 * Delete own Order where time order end
+	 * 
+	 * @param number
+	 * @return
+	 * @throws DBException
+	 */
+	public boolean deleteOwnOrderTimeEnd(int number) throws DBException {
+		boolean flag = false;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		Connection con = null;
+		try {
+			con = DBManager.getInstance().getConnection();
+			pstmt = con.prepareStatement(SQL_DELETE_OWN_ORDER_TIME_END);
+			pstmt.setInt(1, number);
+			pstmt.executeUpdate();
+			con.commit();
+			flag = true;
+		} catch (SQLException ex) {
+			DBManager.getInstance().rollback(con);
+			LOG.error(Messages.ERR_CANNOT_DELETE_ORDER, ex);
+			throw new DBException(Messages.ERR_CANNOT_DELETE_ORDER, ex);
+		} finally {
+			DBManager.getInstance().close(con, pstmt, rs);
+		}
+		return flag;
+
+	}
+
+	/**
 	 * Delete quick Order
 	 * 
 	 * @param number
@@ -774,6 +808,36 @@ public class OrderDAO {
 		try {
 			con = DBManager.getInstance().getConnection();
 			pstmt = con.prepareStatement(SQL_DELETE_QUICK_REQUEST);
+			pstmt.setInt(1, number);
+			pstmt.executeUpdate();
+			con.commit();
+			flag = true;
+		} catch (SQLException ex) {
+			DBManager.getInstance().rollback(con);
+			LOG.error(Messages.ERR_CANNOT_DELETE_ORDER, ex);
+			throw new DBException(Messages.ERR_CANNOT_DELETE_ORDER, ex);
+		} finally {
+			DBManager.getInstance().close(con, pstmt, rs);
+		}
+		return flag;
+
+	}
+
+	/**
+	 * Delete order from Manager
+	 * 
+	 * @param number
+	 * @return
+	 * @throws DBException
+	 */
+	public boolean deleteOrderFromManagerTimeEnd(int number) throws DBException {
+		boolean flag = false;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		Connection con = null;
+		try {
+			con = DBManager.getInstance().getConnection();
+			pstmt = con.prepareStatement(SQL_DELET_MANAGER_ORDER);
 			pstmt.setInt(1, number);
 			pstmt.executeUpdate();
 			con.commit();

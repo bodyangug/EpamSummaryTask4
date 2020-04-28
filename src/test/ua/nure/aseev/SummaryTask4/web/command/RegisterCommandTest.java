@@ -31,7 +31,7 @@ public class RegisterCommandTest extends Mockito {
 
 		List<User> list = new ArrayList<>();
 
-		User user = new User();
+		User user = mock(User.class);
 		user.setId(1l);
 		user.setFirstName("Some Name");
 		user.setSecondName("SomeSname");

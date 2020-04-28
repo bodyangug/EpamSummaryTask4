@@ -38,7 +38,7 @@
 
 	<div class="block-2">
 		<div class="manager">
-			<form action="controller" method="get">
+			<form action="controller" method="post">
 				<input type="hidden" name="command" value="offer">
 				<div class="text-center">
 					<h3><fmt:message key="look_order_jsp.managerOrder"/></h3>

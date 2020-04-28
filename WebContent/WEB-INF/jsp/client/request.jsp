@@ -8,7 +8,7 @@
   <head>
     <title>Make own order</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="style/client/own_request.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="style/client/ownRequest.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="style/header.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="style/datapicker.css" />
  

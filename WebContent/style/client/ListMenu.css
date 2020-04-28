@@ -73,7 +73,7 @@ button {
 }
 
 body {
-	background: url('img/new_back.jpeg') fixed;
+	background: url('../img/new_back.jpeg') fixed;
 	background-size: cover;
 	font-family: "Roboto", sans-serif;
 }

@@ -18,6 +18,7 @@ import ua.nure.aseev.SummaryTask4.db.OrderDAO;
 import ua.nure.aseev.SummaryTask4.db.RoomsDAO;
 import ua.nure.aseev.SummaryTask4.db.entity.OwnRequest;
 import ua.nure.aseev.SummaryTask4.db.entity.Request;
+import ua.nure.aseev.SummaryTask4.db.entity.UserOrderBean;
 import ua.nure.aseev.SummaryTask4.exception.AppException;
 import ua.nure.aseev.SummaryTask4.exception.DBException;
 import ua.nure.aseev.SummaryTask4.exception.Messages;
@@ -80,7 +81,8 @@ public class CheckTimeCommand extends Command {
 				Date orderDate = new SimpleDateFormat("yyyy-MM-dd HH:mm").parse(i.getTimeEnd());
 				Date nowDate = new SimpleDateFormat("yyyy-MM-dd HH:mm").parse(currentDate);
 				int retVal = dateTimeComparator.compare(orderDate, nowDate);
-				if (retVal < 0 && i.isOpearation()) {
+
+				if (retVal < 0) {
 					boolean flag = orderDao.deleteOrderTimeEnd(i.getId());
 					LOG.trace("Delete all order where timeEnd < curentDate -->" + flag);
 					boolean flag2 = roomsDao.updateRoomStatusToFree(i.getRoomNumber());
@@ -103,13 +105,12 @@ public class CheckTimeCommand extends Command {
 			try {
 				Date orderDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(i.getTimeEnd());
 				Date nowDate = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(currentDate);
-
 				int retVal = dateTimeComparator.compare(orderDate, nowDate);
-				if (retVal > 0) {
-					boolean flag = orderDao.deleteOrderTimeEnd(i.getId());
-					LOG.trace("Delete all order where timeEnd < curentDate -->" + flag);
-					boolean flag2 = roomsDao.updateRoomStatusToFree(i.getRoomNumber());
-					LOG.trace("Update rooms= " + i.getRoomNumber() + " status to free " + flag2);
+				if (retVal < 0) {
+					boolean flag = orderDao.deleteOwnOrderTimeEnd(i.getIdUser());
+					LOG.trace("Delete all order where timeEnd < curentDate --> " + flag);
+					boolean flag2 = orderDao.deleteOrderFromManagerTimeEnd(i.getIdUser());
+					LOG.trace("Delete order from manager --> " + flag2);
 				}
 
 			} catch (ParseException e) {

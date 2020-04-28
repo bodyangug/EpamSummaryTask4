@@ -16,7 +16,7 @@
 	<div id="notfound">
 		<div class="notfound">
 			<div class="notfound-404">
-				<h1>500</h1>
+				<h1>Error</h1>
 			</div>
 			<h2>Oops! Something went wrong...</h2>
 			

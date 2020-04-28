@@ -46,7 +46,7 @@ button {
 }
 
 body {
-	background: url('img/change_status.jpeg') fixed;
+	background: url('../img/change_status.jpeg') fixed;
 	background-size: cover;
 	font-family: "Roboto", sans-serif;
 }

@@ -24,7 +24,7 @@ public class LoginCommandTest extends Mockito {
 		HttpSession session = mock(HttpSession.class);
 		UserDAO userDao = mock(UserDAO.class);
 
-		User user = new User();
+		User user = mock(User.class);
 		user.setId(1l);
 		user.setLogin("login");
 		user.setFirstName("Some Name");
